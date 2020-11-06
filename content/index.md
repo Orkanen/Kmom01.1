@@ -6,8 +6,14 @@ Description: This is our index page.
 Home page
 ==========================
 
-The source for this page is in `content/index.md`.
-
-This is a sample home page written in markdown with some frontmatter defined.
-
-The pages make up a Anax site for demonstration purpose, it is something to start from.
+Hej! Mitt namn är Filip Antonsson.
+Jag är 28 år och kommer från Karlskrona.
+Jag har tidigare studerat 2 år på Blekinge Tekniska Högskola
+i Karlshamn. Efter det har jag arbetat 4 år som skolresurs på
+ett mellanstadie.
+Jag har nu valt att återuppta mina studier för att försöka avsluta
+min utbildning inom webb-utveckling.
+På min fritid sysslar jag mestadels med datorn, filmer eller att måla.
+Där arbetar jag mestadels med akryl eller gouache som mina medium.
+Tack för din översikt.
+Hoppas vi kan ha en trevlig gemensam arbetsmiljö!
