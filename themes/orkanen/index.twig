@@ -1,0 +1,35 @@
+<header class="site-header">
+    <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+        <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
+        <span class="sr-only">Toggle Menu</span>
+    </a>
+    <div id="nav" role="navigation" tabindex="-1">
+        <ul>
+            {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+            <li{% if page.id == current_page.id %} class="active" {% endif %}>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+                {% endfor %}
+        </ul>
+    </div>
+    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
+</header>
+
+<body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
+    <header class="site-header">
+
+    </header>
+    <div class="main" id="main" role="main">
+        <div class="container">
+            {{ content }}
+        </div>
+    </div>
+    <footer class="site-footer">
+        
+        <p>Min footer</p>
+    </footer>
+    <script src="{{ theme_url }}/../shared/js/modernizr-3.3.1-custom.min.js" type="text/javascript"></script>
+    <script src="{{ theme_url }}/../shared/js/utils.js" type="text/javascript"></script>
+    <script src="{{ theme_url }}/../shared/js/responsive-navbar.js" type="text/javascript"></script>
+</body>
