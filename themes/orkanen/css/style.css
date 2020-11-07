@@ -20,6 +20,12 @@ body {
     background-color: #73b6ae;
     color: #2b2e30;
     padding: 0 2em;
+    font-size: large;
+}
+
+.active {
+    color: Orange;
+    font-size: xx-large;
 }
 
 .site-header a, .site-header a:visited {
@@ -30,7 +36,9 @@ body {
 
 .main {
     flex: 1 0 auto;
-    padding: 2em;
+    /*padding: 2em;*/
+    background-color: #f3e8ef;
+
 }
 
 /* Footer */
@@ -44,4 +52,40 @@ body {
 
 .site-footer a {
     color: #f0f0f0;
+}
+
+.title, .logo {
+    float: left;
+    padding: 3em 3em 3em 0;
+}
+
+.logo {
+    height: 10.8em;
+}
+
+.logo * {
+    display: block;
+    height: 100%;
+    border-radius: 3em;
+}
+
+#nav {
+    float: right;
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margin: 0  auto;
+    background-color: white;
+    height: 100%;
+    padding: 2em;
+}
+
+.container p {
+    text-align: justify;
+}
+
+.myImage {
+    width: 10em;
 }

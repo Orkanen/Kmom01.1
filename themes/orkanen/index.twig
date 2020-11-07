@@ -1,34 +1,48 @@
-<header class="site-header">
-    <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
-        <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
-        <span class="sr-only">Toggle Menu</span>
-    </a>
-    <div id="nav" role="navigation" tabindex="-1">
-        <ul>
-            {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
-            <li{% if page.id == current_page.id %} class="active" {% endif %}>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-                </li>
-                {% endfor %}
-        </ul>
-    </div>
-    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
-</header>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+</head>
 
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <header class="site-header">
-
+        <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+            <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
+            <span class="sr-only">Toggle Menu</span>
+        </a>
+        <div id="nav" role="navigation">
+            <ul>
+                {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                <li{% if page.id == current_page.id %} class="active" {% endif %}>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                    {% endfor %}
+            </ul>
+        </div>
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
+        {% if pages["_meta"].meta.logo %}
+            <div class="logo" aria-hidden="true">
+                <a href="{{ "index"|link }}">
+                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="" />
+                </a>
+            </div>
+        {% endif %}
     </header>
     <div class="main" id="main" role="main">
         <div class="container">
+            <img src="assets/img/derp.png" alt="me" class="myImage">
             {{ content }}
         </div>
     </div>
+
     <footer class="site-footer">
-        
-        <p>Min footer</p>
+
+        <a href="https://github.com/Orkanen/Kmom01.1">Github</a>
+
     </footer>
+
     <script src="{{ theme_url }}/../shared/js/modernizr-3.3.1-custom.min.js" type="text/javascript"></script>
     <script src="{{ theme_url }}/../shared/js/utils.js" type="text/javascript"></script>
     <script src="{{ theme_url }}/../shared/js/responsive-navbar.js" type="text/javascript"></script>

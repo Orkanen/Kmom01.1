@@ -17,3 +17,6 @@ På min fritid sysslar jag mestadels med datorn, filmer eller att måla.
 Där arbetar jag mestadels med akryl eller gouache som mina medium.
 Tack för din översikt.
 Hoppas vi kan ha en trevlig gemensam arbetsmiljö!
+
+
+<a href="%base_url%?docs/report/kmom01">Kmom01</a>
