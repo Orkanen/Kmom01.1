@@ -1,0 +1,53 @@
+@use 'sass:color';
+@import '../../node_modules/normalize.css/normalize';
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import 'old';
+
+
+$mainColor: adjust-hue(#73b6ae, 60deg);
+$secondaryColor: color.adjust(#73b6ae, $red: 50);
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 801px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.main {
+    background-color: $secondaryColor;
+}
+
+.site-header {
+    background-color: $mainColor;
+}
+
+.site-footer {
+    background-color: $mainColor;
+}
+
+.container a:hover {
+    color: $mainColor;
+}
