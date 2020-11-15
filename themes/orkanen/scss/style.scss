@@ -51,3 +51,7 @@ p {
 .container a:hover {
     color: $mainColor;
 }
+
+.container > p:nth-child(2) > img:nth-child(1) {
+    width: 10em;
+}

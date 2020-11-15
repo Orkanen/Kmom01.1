@@ -6660,3 +6660,7 @@ p {
 .container a:hover {
   color: #737bb6;
 }
+
+.container > p:nth-child(2) > img:nth-child(1) {
+  width: 10em;
+}
