@@ -1,7 +1,7 @@
 ---
 Title: Kmom06
 Description: Subpage for report on Kmom06
-Template: Kmom
+Template: kmom
 ---
 
 Kmom06:
