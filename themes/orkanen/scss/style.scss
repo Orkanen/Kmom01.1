@@ -7,16 +7,23 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import '../../shared/fontawesome/scss/regular';
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import 'old';
+@import 'report';
+@import 'nav.css';
 
 
-$mainColor: adjust-hue(#73b6ae, 60deg);
-$secondaryColor: color.adjust(#73b6ae, $red: 50);
+$main-color: adjust-hue(#73b6ae, 60deg);
+$secondary-color: color.adjust(#73b6ae, $red: 50);
 
 * {
     font-family: 'Oswald', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -37,19 +44,19 @@ p {
 }
 
 .main {
-    background-color: $secondaryColor;
+    background-color: $secondary-color;
 }
 
 .site-header {
-    background-color: $mainColor;
+    background-color: $main-color;
 }
 
 .site-footer {
-    background-color: $mainColor;
+    background-color: $main-color;
 }
 
 .container a:hover {
-    color: $mainColor;
+    color: $main-color;
 }
 
 .container > p:nth-child(2) > img:nth-child(1) {
