@@ -1,0 +1,39 @@
+.reportpage {
+    display: grid;
+    gap: 1em 1em;
+    padding: 0 1em;
+}
+
+.reportpage h1 {
+    grid-column: span 3;
+    justify-self: center;
+}
+
+.kmom-box {
+    grid-column: span 1;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.kmom-box.project {
+    grid-column: span 3;
+}
+
+@media (max-width: 920px) {
+    .reportpage,
+    .kmom-box,
+    .kmom-box.project {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 767px) {
+    .reportpage,
+    .kmom-box,
+    .kmom-box.project {
+        grid-column: span 4;
+    }
+}

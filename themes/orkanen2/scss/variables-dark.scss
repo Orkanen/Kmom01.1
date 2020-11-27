@@ -1,0 +1,7 @@
+$main-color: #737bb6;
+$secondary-color: #202020;
+$third-color: #9f9f9f;
+$fourth-color: #141414;
+
+$container-fourth-color: color.change(#141414, $lightness: 5%);
+$text-third-color: color.change(#9f9f9f, $lightness: 70%);

@@ -1,0 +1,63 @@
+@use 'sass:color';
+@import 'common';
+@import 'report';
+@import 'old';
+@import 'nav';
+@import 'typography';
+@import 'variables-dark';
+
+/* Header */
+.site-header {
+    background-color: $fourth-color;
+    color: $third-color;
+}
+
+.active {
+    color: $third-color;
+}
+
+.site-header a,
+.site-header a:visited {
+    color: $text-third-color;
+}
+
+/* Main */
+.main {
+    background-color: $secondary-color;
+}
+
+/* Footer */
+.site-footer {
+    background: $fourth-color;
+    color: $third-color;
+}
+
+.site-footer a {
+    color: $text-third-color;
+}
+
+.container {
+    background-color: $container-fourth-color;
+}
+
+.kmom-box {
+    background-color: $container-fourth-color;
+}
+
+.kmom-box a,
+.kmom-box a:visited {
+    color: $text-third-color;
+}
+
+#navColumn li a {
+    color: $text-third-color;
+}
+
+p,
+h1 {
+    color: $text-third-color;
+}
+
+img {
+    filter: grayscale(100%);
+}

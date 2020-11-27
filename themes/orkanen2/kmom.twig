@@ -3,36 +3,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
     <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    {% if config.session.theme == "dark"%}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style-dark.css" type="text/css" />
+    {% else %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+    {% endif %}
 </head>
 
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <header class="site-header">
-        <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
-            <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
-            <span class="sr-only">Toggle Menu</span>
-        </a>
-
-        <div id="nav" role="navigation">
-            <ul>
-                {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
-                    <li{% if page.id == current_page.id %} class="active" {% endif %}>
-                            <a href="{{ page.url }}">
-                                {% if page.meta.icon %}
-                                    <i class="{{ page.meta.icon }}"></i>
-                                {% else %}
-                                    {{ page.title }}
-                                {% endif %}
-                            </a>
-                    </li>
-                {% endfor %}
-                {% for page in pages("report") %}
-                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-        <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
         {% if pages["_meta"].meta.logo %}
             <div class="logo" aria-hidden="true">
                 <a href="{{ "index"|link }}">
@@ -43,8 +22,23 @@
     </header>
 
     <div class="main" id="main" role="main">
-        <div class="reportpage">
-            {{ content }}
+        <div id="flexbox">
+            <div id="nav" class="sidebar" role="navigation">
+                <ul id="navColumn">
+                    {% for page in pages("report/sub") %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+                <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
+                <span class="sr-only">Toggle Menu</span>
+            </a>
+            <div class="kmompage" id="kmompage">
+                <div class="container">
+                    {{ content }}
+                </div>
+            </div>
         </div>
     </div>
 

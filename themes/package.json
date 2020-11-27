@@ -1,13 +1,16 @@
 {
   "name": "themes",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint \"**/*.scss\"",
-    "style": "sass orkanen/scss/style.scss orkanen/css/style.css --no-source-map",
-    "style-min": "sass orkanen/scss/style.scss orkanen/css/style.min.css --no-source-map --style compressed"
+    "style": "npm run style-light && npm run style-dark",
+    "style-min": "npm run style-light-min && npm run style-dark-min",
+    "style-light": "sass orkanen2/scss/style.scss orkanen2/css/style.css --no-source-map",
+    "style-light-min": "sass orkanen2/scss/style.scss orkanen2/css/style.min.css --no-source-map --style compressed",
+    "style-dark": "sass orkanen2/scss/style-dark.scss orkanen2/css/style-dark.css --no-source-map",
+    "style-dark-min": "sass orkanen2/scss/style-dark.scss orkanen2/css/style-dark.min.css --no-source-map --style compressed"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +23,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1"
-  }
+  },
+  "description": ""
 }

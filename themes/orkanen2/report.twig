@@ -3,6 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
     <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    {% if config.session.theme == "dark"%}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style-dark.css" type="text/css" />
+    {% else %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+    {% endif %}
 </head>
 
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
@@ -31,8 +36,6 @@
             </ul>
         </div>
 
-        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-        <link rel="stylesheet" href="{{ theme_url }}/css/nav.css" type="text/css" />
         {% if pages["_meta"].meta.logo %}
             <div class="logo" aria-hidden="true">
                 <a href="{{ "index"|link }}">
@@ -42,11 +45,13 @@
         {% endif %}
     </header>
 
-    <div class="main" id="main" role="main">
-        <div class="reportpage">
-            {{ content }}
+        <div class="main" id="main" role="main">
+            <div class="anotherFlex" id="anotherFlex">
+                <div class="reportpage">
+                    {{ content }}
+                </div>
+            </div>
         </div>
-    </div>
 
 <footer class="site-footer">
 

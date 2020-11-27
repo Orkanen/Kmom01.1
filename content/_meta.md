@@ -5,4 +5,7 @@ Social:
     - title: Link till sidans github repo.
       url: https://github.com/Orkanen/Kmom01.1
       icon: fab fa-github
+    - title: Dark Mode
+      url: ?action=theme
+      icon: fas fa-moon
 ---
