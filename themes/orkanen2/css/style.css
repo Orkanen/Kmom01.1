@@ -13336,3 +13336,7 @@ p {
 .logo img {
   filter: sepia(100%);
 }
+
+.small {
+  width: 75%;
+}
