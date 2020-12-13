@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8" />
+    <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
     <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
@@ -12,7 +13,7 @@
 
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <header class="site-header">
-        <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+        <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false">
             <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
             <span class="sr-only">Toggle Menu</span>
         </a>
@@ -23,7 +24,7 @@
                     <li{% if page.id == current_page.id %} class="active" {% endif %}>
                             <a href="{{ page.url }}">
                                 {% if page.meta.icon %}
-                                    <i class="{{ page.meta.icon }}"></i>
+                                    <i class="{{ page.meta.icon }}" alt="{{ page.meta.title }}" title="{{ page.meta.title }}"></i>
                                 {% else %}
                                     {{ page.title }}
                                 {% endif %}
@@ -37,9 +38,9 @@
         </div>
 
         {% if pages["_meta"].meta.logo %}
-            <div class="logo" aria-hidden="true">
+            <div class="logo">
                 <a href="{{ "index"|link }}">
-                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="" />
+                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="me" />
                 </a>
             </div>
         {% endif %}

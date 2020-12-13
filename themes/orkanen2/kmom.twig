@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8" />
+    <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
     <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
@@ -13,9 +14,9 @@
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <header class="site-header">
         {% if pages["_meta"].meta.logo %}
-            <div class="logo" aria-hidden="true">
+            <div class="logo">
                 <a href="{{ "index"|link }}">
-                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="" />
+                    <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="me" />
                 </a>
             </div>
         {% endif %}
@@ -24,13 +25,13 @@
     <div class="main" id="main" role="main">
         <div id="flexbox">
             <div id="nav" class="sidebar" role="navigation">
-                <ul id="navColumn">
+                <ul id="navColumn" class="navcolumn">
                     {% for page in pages("report/sub") %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        <li><a href="{{ page.url }}" alt="{{ page.meta.title }}">{{ page.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
-            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false">
                 <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
                 <span class="sr-only">Toggle Menu</span>
             </a>

@@ -13319,7 +13319,7 @@ p {
 
 .site-header a,
 .site-header a:visited {
-  color: #a85761;
+  color: #432327;
 }
 
 /* Main */
@@ -13334,7 +13334,7 @@ p {
 }
 
 .site-footer a {
-  color: #a85761;
+  color: #432327;
 }
 
 .container {
@@ -13347,11 +13347,11 @@ p {
 
 .kmom-box a,
 .kmom-box a:visited {
-  color: #a85761;
+  color: #432327;
 }
 
-#navColumn li a {
-  color: #a85761;
+.navcolumn li a {
+  color: #432327;
 }
 
 .logo img {
